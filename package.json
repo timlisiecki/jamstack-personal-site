@@ -5,11 +5,36 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
-    "next": "10.0.5",
+    "@contentful/rich-text-react-renderer": "^14.1.2",
+    "@headlessui/react": "^0.2.0",
+    "@tailwindcss/postcss7-compat": "^2.0.2",
+    "@tailwindcss/typography": "^0.4.0",
+    "autoprefixer": "^9.8.6",
+    "contentful": "^8.1.7",
+    "next": "^10.0.6",
+    "postcss": "^7.0.35",
+    "prop-types": "^15.7.2",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "react-markdown": "^5.0.3",
+    "react-uuid": "^1.0.2",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.13",
+    "@babel/core": "^7.12.10",
+    "@babel/register": "^7.12.13",
+    "@storybook/addon-actions": "^6.2.0-alpha.23",
+    "@storybook/addon-essentials": "^6.2.0-alpha.31",
+    "@storybook/addon-links": "^6.2.0-alpha.23",
+    "@storybook/react": "^6.2.0-alpha.31",
+    "babel-loader": "^8.2.2",
+    "postcss-flexbugs-fixes": "^4.2.1",
+    "postcss-preset-env": "^6.7.0"
   }
 }
