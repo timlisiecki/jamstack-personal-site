@@ -7,7 +7,8 @@ function Button(props) {
 	if (props.type === 'primary') {
 		buttonColors = 'text-white dark:text-blue-900 bg-indigo-600 dark:bg-green-300 hover:bg-indigo-700 dark:hover:bg-green-400';
 	} else if (props.type === 'secondary') {
-		buttonColors = 'text-indigo-600 bg-white dark:bg-indigo-100 hover:bg-gray-50 dark:hover:bg-indigo-300';
+		buttonColors =
+			'text-indigo-600 dark:text-green-300 bg-white dark:bg-transparent dark:border-2 dark:border-green-300 hover:bg-gray-50 dark:hover:bg-blue-800';
 	}
 
 	switch (props.size) {

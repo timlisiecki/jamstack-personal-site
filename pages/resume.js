@@ -24,16 +24,18 @@ export default function Resume({ resume }) {
 			<div className='max-w-4xl mx-auto mb-8'>
 				<div className='dark:text-white'>
 					<h4>Skills</h4>
-					{resume.skills.map((skill) => {
-						return (
-							<span
-								key={uuid()}
-								className='bg-gray-100 dark:bg-blue-800 hover:bg-gray-200 dark:hover:bg-blue-700 cursor-pointer p-1 mb-1 rounded-sm'
-							>
-								{skill.fields.tagName}
-							</span>
-						);
-					})}
+					<div className='flex flex-wrap'>
+						{resume.skills.map((skill) => {
+							return (
+								<span
+									key={uuid()}
+									className='p-1 mb-1 ml-1 bg-gray-100 dark:bg-blue-800 hover:bg-gray-200 dark:hover:bg-blue-700 cursor-pointer rounded-sm'
+								>
+									{skill.fields.tagName}
+								</span>
+							);
+						})}
+					</div>
 				</div>
 			</div>
 			<WorkHistory roles={resume.employmentHistory} />

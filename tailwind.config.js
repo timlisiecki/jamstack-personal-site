@@ -19,13 +19,67 @@ module.exports = {
       },
 			fontFamily: {
 				sans: ['Poppins', 'sans-serif']
-			}
+			},
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            color: theme("colors.gray.900"),
+            a: {
+              color: theme("colors.indigo.600"),
+              textDecoration: 'none',
+              "&:hover": {
+                color: theme("colors.indigo.700"),
+              },
+            },
+          },
+        },
+        dark: {
+          css: {
+            color: theme("colors.gray.100"),
+            a: {
+              color: theme("colors.green.300"),
+              textDecoration: 'none',
+              "&:hover": {
+                color: theme("colors.green.400"),
+              },
+            },
+            h1: {
+              color: theme('colors.white'),
+            },
+            h2: {
+              color: theme('colors.white'),
+            },
+            h3: {
+              color: theme('colors.white'),
+            },
+            h4: {
+              color: theme('colors.white'),
+            },
+            h5: {
+              color: theme('colors.white'),
+            },
+            h6: {
+              color: theme('colors.white'),
+            },
+            strong: {
+              color: theme('colors.white'),
+            },
+            code: {
+              color: theme('colors.white'),
+            },
+            figcaption: {
+              color: theme('colors.gray.200'),
+            },
+          },
+        },
+      }),
 		},
   },
   variants: {
 		extend: {
+      boxShadow: ['dark'],
       scale: ['group-hover'],
-      boxShadow: ['dark']
+      typography: ["dark"],
     },
   },
   plugins: [
