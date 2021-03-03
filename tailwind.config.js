@@ -17,6 +17,19 @@ module.exports = {
         'xl-white': '0 20px 25px -5px rgba(255, 255, 255, 0.1), 0 10px 10px -5px rgba(255, 255, 255, 0.04)',
         'inner-white': 'inset 0 2px 4px 0 rgba(255, 255, 255, 0.06)',
       },
+      colors: {
+        'regal': {
+          100: '#edf2f8',
+          200: '#c8d7e9',
+          300: '#a4bddb',
+          400: '#7fa2cc',
+          500: '#5b87be',
+          600: '#416ea4',
+          700: '#335580',
+          800: '#243c5a',
+          900: '#162537',
+        }
+      },
 			fontFamily: {
 				sans: ['Poppins', 'sans-serif']
 			},

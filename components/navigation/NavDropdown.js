@@ -11,7 +11,7 @@ function NavDropdown(props) {
 				onClick={() => setDropdown(!dropdown)}
 				// onBlur={() => setDropdown(false)}
 				type='button'
-				className={`group bg-white dark:bg-blue-900 lg:bg-transparent rounded-md ${
+				className={`group bg-white dark:bg-regal-800 lg:bg-transparent rounded-md ${
 					dropdown ? 'text-indigo-600 dark:text-green-300' : 'text-gray-500 dark:text-white'
 				} inline-flex items-center text-base font-medium hover:text-indigo-600 dark:hover:text-green-300 focus:outline-none dark:focus:ring-green-300`}
 			>
@@ -44,7 +44,7 @@ function NavDropdown(props) {
 			>
 				<div className='lg:absolute z-10 lg:left-1/2 lg:transform lg:-translate-x-1/2 mt-3 px-2 w-screen max-w-xs sm:px-0'>
 					<div className='rounded-lg shadow-inner dark:shadow-inner-white lg:shadow-lg dark:lg:shadow-lg-white ring-1 ring-black ring-opacity-5 overflow-hidden '>
-						<div className='relative grid gap-6 bg-white dark:bg-blue-900 px-5 py-6 sm:gap-4 sm:p-8'>{props.children}</div>
+						<div className='relative grid gap-6 bg-white dark:bg-regal-800 px-5 py-6 sm:gap-4 sm:p-8'>{props.children}</div>
 					</div>
 				</div>
 			</Transition>

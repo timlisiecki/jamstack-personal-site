@@ -2,20 +2,20 @@ import React, { useEffect } from 'react';
 
 function Stats() {
 	return (
-		<div className='bg-gray-50 dark:bg-blue-800 pt-12 sm:pt-16'>
+		<div className='bg-gray-50 dark:bg-regal-700 pt-12 sm:pt-16'>
 			<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 				<div className='max-w-4xl mx-auto text-center'>
 					<h2 className='text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl'>Modern Website Stack</h2>
 					<p className='mt-3 text-xl text-gray-500 dark:text-gray-300 sm:mt-4'>This site is built using the modern website stack.</p>
 				</div>
 			</div>
-			<div className='mt-10 pb-12 bg-white dark:bg-blue-900 sm:pb-16'>
+			<div className='mt-10 pb-12 bg-white dark:bg-regal-800 sm:pb-16'>
 				<div className='relative'>
-					<div className='absolute inset-0 h-1/2 bg-gray-50 dark:bg-blue-800'></div>
+					<div className='absolute inset-0 h-1/2 bg-gray-50 dark:bg-regal-700'></div>
 					<div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 						<div className='max-w-6xl mx-auto'>
-							<dl className='rounded-lg bg-white dark:bg-blue-900 shadow-lg dark:shadow-lg-white sm:grid sm:grid-cols-4'>
-								<div className='flex flex-col border-b border-gray-100 dark:border-blue-800 p-6 text-center sm:border-0 sm:border-r'>
+							<dl className='rounded-lg bg-white dark:bg-regal-800 shadow-lg dark:shadow-lg-white sm:grid sm:grid-cols-4'>
+								<div className='flex flex-col border-b border-gray-100 dark:border-regal-700 p-6 text-center sm:border-0 sm:border-r'>
 									<dt className='order-2 mt-2 text-lg leading-6 font-medium text-gray-500 dark:text-gray-300'>For Headless CMS</dt>
 									<dd className='order-1 text-2xl font-extrabold text-gray-900 dark:text-white'>
 										<svg
@@ -56,11 +56,11 @@ function Stats() {
 										</svg>
 									</dd>
 								</div>
-								<div className='flex flex-col border-t border-b border-gray-100 dark:border-blue-800 p-6 text-center sm:border-0 sm:border-l sm:border-r'>
+								<div className='flex flex-col border-t border-b border-gray-100 dark:border-regal-700 p-6 text-center sm:border-0 sm:border-l sm:border-r'>
 									<dt className='order-2 mt-2 text-lg leading-6 font-medium text-gray-500 dark:text-gray-300'>
 										For Client-Side Rendering
 									</dt>
-									<dd className='order-1 text-2xl font-extrabold text-white dark:text-blue-900'>
+									<dd className='order-1 text-2xl font-extrabold text-white dark:text-regal-800'>
 										{/* fill:#39d8ff */}
 										<svg
 											xmlns='http://www.w3.org/2000/svg'
@@ -90,7 +90,7 @@ function Stats() {
 										</svg>
 									</dd>
 								</div>
-								<div className='flex flex-col border-t border-b border-gray-100 dark:border-blue-800 p-6 text-center sm:border-0 sm:border-l sm:border-r'>
+								<div className='flex flex-col border-t border-b border-gray-100 dark:border-regal-700 p-6 text-center sm:border-0 sm:border-l sm:border-r'>
 									<dt className='order-2 mt-2 text-lg leading-6 font-medium text-gray-500 dark:text-gray-300'>
 										For Server-Side Rendering
 									</dt>
@@ -134,7 +134,7 @@ function Stats() {
 										</svg>
 									</dd>
 								</div>
-								<div className='flex flex-col border-t border-gray-100 dark:border-blue-800 p-6 text-center sm:border-0 sm:border-l'>
+								<div className='flex flex-col border-t border-gray-100 dark:border-regal-700 p-6 text-center sm:border-0 sm:border-l'>
 									<dt className='order-2 mt-2 text-lg leading-6 font-medium text-gray-500 dark:text-gray-300'>
 										For CSS + UI Components
 									</dt>

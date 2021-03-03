@@ -5,7 +5,7 @@ import SortAndFilterInputs from '../SortAndFilterInputs';
 
 function DisplayEntries(props) {
 	return (
-		<div className='relative bg-gray-50 dark:bg-blue-800 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8'>
+		<div className='relative bg-gray-50 dark:bg-regal-700 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8'>
 			<div className='relative max-w-7xl mx-auto'>
 				<div className='text-center'>
 					<h2 className='text-3xl tracking-tight font-extrabold text-gray-900 dark:text-white sm:text-4xl'>{props.title}</h2>

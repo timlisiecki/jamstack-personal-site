@@ -3,7 +3,7 @@ import Button from './Button';
 function HomeHero() {
 	return (
 		<section className='lg:relative flex flex-col lg:flex-row'>
-			<div className='w-full lg:w-1/2 text-center lg:text-left dark:bg-blue-900'>
+			<div className='w-full lg:w-1/2 text-center lg:text-left dark:bg-regal-800'>
 				<div className='px-4 py-12 sm:px-8 xl:pr-16'>
 					<h2 className='dark:text-white'>Tim Lisiecki</h2>
 					<h1 className='text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl'>

@@ -2,7 +2,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 function PostContent(props) {
 	return (
-		<div className='relative py-16 bg-white dark:bg-blue-900 overflow-hidden'>
+		<div className='relative py-16 bg-white dark:bg-regal-800 overflow-hidden'>
 			<div className='relative px-4 sm:px-6 lg:px-8'>
 				{/* <div className='text-lg max-w-prose mx-auto'>
 					<p className='mt-8 text-xl text-gray-500 dark:text-gray-300 leading-8'>
@@ -10,7 +10,7 @@ function PostContent(props) {
 						at vitae feugiat egestas ac. Diam nulla orci at in viverra scelerisque eget. Eleifend egestas fringilla sapien.
 					</p>
 				</div> */}
-				<div className='mt-6 prose prose-indigo prose-lg text-gray-500 dark:text-gray-300 mx-auto'>
+				<div className='mt-6 prose dark:prose-dark prose-lg text-gray-500 dark:text-gray-300 mx-auto'>
 					{documentToReactComponents(props.content.content)}
 				</div>
 			</div>

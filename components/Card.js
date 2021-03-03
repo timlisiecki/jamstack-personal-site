@@ -3,11 +3,11 @@ import Button from './Button';
 
 function Card(props) {
 	return (
-		<div className='group flex flex-col rounded-lg shadow-lg dark:shadow-lg-white bg-white dark:bg-blue-900'>
+		<div className='group flex flex-col rounded-lg shadow-lg dark:shadow-lg-white bg-white dark:bg-regal-800'>
 			{props.image && (
 				<div className='flex-shrink-0'>
 					<img
-						className={`bg-white dark:bg-blue-900 h-48 w-full ${
+						className={`bg-white dark:bg-regal-800 h-48 w-full ${
 							props.type === 'book' ? 'object-contain' : 'object-cover'
 						} object-top shadow dark:shadow-white group-hover:shadow-lg dark:group:hover:shadow-lg-white rounded-md transform transition group-hover:scale-105`}
 						height='300'
@@ -52,7 +52,7 @@ function Card(props) {
 							{props.tags.map((tag) => {
 								return (
 									<span key={uuid()}>
-										<small className='bg-gray-100 dark:bg-blue-800 hover:bg-gray-200 dark:hover:bg-blue-700 cursor-pointer p-1 mb-1 rounded-sm'>
+										<small className='bg-gray-100 dark:bg-regal-700 hover:bg-gray-200 dark:hover:bg-regal-600 cursor-pointer p-1 mb-1 rounded-sm'>
 											{tag.fields.tagName}
 										</small>
 									</span>

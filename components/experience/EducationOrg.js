@@ -4,7 +4,7 @@ function EducationOrg({ title, org, link, endDate, location }) {
 			<div className='relative flex items-start space-x-3'>
 				<div>
 					<div className='relative px-1'>
-						<div className='h-8 w-8 bg-gray-100 dark:bg-blue-800 rounded-full ring-8 ring-white flex items-center justify-center'>
+						<div className='h-8 w-8 bg-gray-100 dark:bg-regal-700 rounded-full ring-8 ring-white flex items-center justify-center'>
 							<svg
 								className='h-5 w-5 text-gray-500 dark:text-gray-300'
 								xmlns='http://www.w3.org/2000/svg'

@@ -7,7 +7,7 @@ export default class SiteDocument extends Document {
 				<Head>
 					<meta charSet='utf-8' />
 				</Head>
-				<body className='bg-white dark:bg-blue-900'>
+				<body className='bg-white dark:bg-regal-800'>
 					<Main />
 					<NextScript />
 				</body>

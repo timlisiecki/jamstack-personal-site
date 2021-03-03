@@ -3,7 +3,7 @@ function NavMobileButton({ open, setOpen }) {
 		<button
 			onClick={() => setOpen(!open)}
 			type='button'
-			className='bg-white dark:bg-blue-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 dark:text-white hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-0 focus:ring-inset focus:ring-indigo-500'
+			className='bg-white dark:bg-regal-800 rounded-md p-2 inline-flex items-center justify-center text-gray-400 dark:text-white hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-0 focus:ring-inset focus:ring-indigo-500'
 		>
 			<span className='sr-only'>Open menu</span>
 			{open ? (

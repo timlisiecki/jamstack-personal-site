@@ -12,7 +12,7 @@ function Navbar() {
 
 	return (
 		<header className='lg:sticky lg:top-0 z-50'>
-			<div className='relative bg-white dark:bg-blue-900 shadow dark:shadow-white'>
+			<div className='relative bg-white dark:bg-regal-800 shadow dark:shadow-white'>
 				<div className='relative flex justify-between items-center px-4 py-4 sm:px-6 md:justify-start md:space-x-10'>
 					<div>
 						<a href='/' className='flex'>
@@ -35,7 +35,7 @@ function Navbar() {
 						To: "opacity-0 scale-95"
 					--> */}
 					<div
-						className={`absolute lg:static top-16 inset-x-0 z-50 p-10 lg:p-0 transition-opacity transition-scale transform origin-top-right md:flex-1 md:flex md:items-center md:justify-between bg-white dark:bg-blue-900 shadow lg:shadow-none ${
+						className={`absolute lg:static top-16 inset-x-0 z-50 p-10 lg:p-0 transition-opacity transition-scale transform origin-top-right md:flex-1 md:flex md:items-center md:justify-between bg-white dark:bg-regal-800 shadow lg:shadow-none ${
 							!openMobileMenu ? 'hidden' : ''
 						}`}
 					>
@@ -63,7 +63,7 @@ function Navbar() {
 							<ToggleDarkMode />
 							<a
 								href='#'
-								className='mx-auto my-4 lg:my-0 lg:ml-8 inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white dark:text-blue-900 bg-indigo-600 dark:bg-green-300 hover:bg-indigo-700 dark:hover:bg-green-400'
+								className='mx-auto my-4 lg:my-0 lg:ml-8 inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white dark:text-regal-800 bg-indigo-600 dark:bg-green-300 hover:bg-indigo-700 dark:hover:bg-green-400'
 							>
 								Contact
 							</a>

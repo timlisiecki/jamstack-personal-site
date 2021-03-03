@@ -3,11 +3,11 @@ import ReactMarkdown from 'react-markdown';
 function WorkRole({ title, company, companyURL, location, startDate, endDate, desc, isLastItem }) {
 	return (
 		<div className='relative pb-8'>
-			{!isLastItem && <span className='absolute top-5 left-5 -ml-px h-full w-0.5 bg-gray-200 dark:bg-blue-500' aria-hidden='true'></span>}
+			{!isLastItem && <span className='absolute top-5 left-5 -ml-px h-full w-0.5 bg-gray-200 dark:bg-regal-400' aria-hidden='true'></span>}
 			<div className='relative flex items-start space-x-3'>
 				<div>
 					<div className='relative px-1'>
-						<div className='h-8 w-8 bg-gray-100 dark:bg-blue-800 rounded-full ring-8 ring-white flex items-center justify-center'>
+						<div className='h-8 w-8 bg-gray-100 dark:bg-regal-700 rounded-full ring-8 ring-white flex items-center justify-center'>
 							<svg
 								className='h-5 w-5 text-gray-500 dark:text-gray-300'
 								xmlns='http://www.w3.org/2000/svg'
