@@ -3,7 +3,7 @@ import Button from './Button';
 
 function Card(props) {
 	return (
-		<div className='group flex flex-col rounded-lg shadow-lg dark:shadow-lg-white bg-white dark:bg-regal-800'>
+		<div className='group flex flex-col rounded-lg shadow-lg dark:shadow-lg-white bg-white dark:bg-regal-900'>
 			{props.image && (
 				<div className='flex-shrink-0'>
 					<img
@@ -14,7 +14,7 @@ function Card(props) {
 						width='400'
 						srcSet={`https://${props.image.file.url}?w=400&h=300&fm=webp&q=80 400w, https://${props.image.file.url}?w=800&h=600&fm=webp&q=80 800w`}
 						src={`https://${props.image.file.url}?w=400&h=300&fm=webp&q=80`}
-						alt={props.image.file.title}
+						alt={props.image.title}
 					/>
 				</div>
 			)}

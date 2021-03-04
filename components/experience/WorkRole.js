@@ -7,7 +7,7 @@ function WorkRole({ title, company, companyURL, location, startDate, endDate, de
 			<div className='relative flex items-start space-x-3'>
 				<div>
 					<div className='relative px-1'>
-						<div className='h-8 w-8 bg-gray-100 dark:bg-regal-700 rounded-full ring-8 ring-white flex items-center justify-center'>
+						<div className='h-8 w-8 bg-gray-100 dark:bg-regal-700 rounded-full ring-1 ring-white flex items-center justify-center'>
 							<svg
 								className='h-5 w-5 text-gray-500 dark:text-gray-300'
 								xmlns='http://www.w3.org/2000/svg'
@@ -31,7 +31,7 @@ function WorkRole({ title, company, companyURL, location, startDate, endDate, de
 							<span className='text-lg font-bold text-indigo-600 dark:text-green-300'>{title}</span>
 						</div>
 						<div className='mt-3 text-center md:mt-0 md:flex md:items-center'>
-							<div className='text-base font-medium text-gray-900 dark:text-white'>
+							<div className='text-base font-medium text-gray-900 hover:text-gray-700 dark:text-white dark:hover:text-gray-200'>
 								<a href={companyURL} target='_blank' rel='noopener'>
 									{company}
 								</a>

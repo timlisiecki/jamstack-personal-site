@@ -16,9 +16,11 @@ export default function Resume({ resume }) {
 			</Head>
 			<PageHeader title='Resume' phrase='Experience is key' desc='But is it really work if you love what you do?' />
 			<div className='max-w-4xl mx-auto mb-8'>
-				<h4>Summary</h4>
 				<div className='dark:text-white'>
-					<ReactMarkdown>{resume.summary}</ReactMarkdown>
+					<h4 className='mb-3'>Summary</h4>
+					<div>
+						<ReactMarkdown>{resume.summary}</ReactMarkdown>
+					</div>
 				</div>
 			</div>
 			<div className='max-w-4xl mx-auto mb-8'>
@@ -38,43 +40,47 @@ export default function Resume({ resume }) {
 					</div>
 				</div>
 			</div>
-			<WorkHistory roles={resume.employmentHistory} />
+			<WorkHistory title='Experience' roles={resume.employmentHistory} />
 			<div className='max-w-4xl mx-auto mb-8'>
-				<h4>Education</h4>
-				<div>
-					{resume.education.map((org) => {
-						if (org.fields.educationType === 'University') {
-							return (
-								<EducationOrg
-									key={uuid()}
-									title={org.fields.certification}
-									org={org.fields.organization}
-									link={org.fields.certificationLink}
-									endDate={org.fields.endDate}
-									location={org.fields.location}
-									courses={org.fields.courses ? org.fields.courses : null}
-								/>
-							);
-						}
-					})}
-				</div>
-				<div>
-					<h6>Professional Development</h6>
-					{resume.education.map((org) => {
-						if (org.fields.educationType === 'Professional Development') {
-							return (
-								<EducationOrg
-									key={uuid()}
-									title={org.fields.certification}
-									org={org.fields.organization}
-									link={org.fields.certificationLink}
-									endDate={org.fields.endDate}
-									location={org.fields.location}
-									courses={org.fields.courses ? org.fields.courses : null}
-								/>
-							);
-						}
-					})}
+				<div className='dark:text-white'>
+					<h4 className='mb-3'>Education</h4>
+					<div>
+						{resume.education.map((org) => {
+							if (org.fields.educationType === 'University') {
+								return (
+									<EducationOrg
+										key={uuid()}
+										title={org.fields.certification}
+										org={org.fields.organization}
+										link={org.fields.certificationLink}
+										endDate={org.fields.endDate}
+										location={org.fields.location}
+										courses={org.fields.courses ? org.fields.courses : null}
+									/>
+								);
+							}
+						})}
+					</div>
+					<div>
+						<h6 className='mb-3'>Professional Development</h6>
+						<div>
+							{resume.education.map((org) => {
+								if (org.fields.educationType === 'Professional Development') {
+									return (
+										<EducationOrg
+											key={uuid()}
+											title={org.fields.certification}
+											org={org.fields.organization}
+											link={org.fields.certificationLink}
+											endDate={org.fields.endDate}
+											location={org.fields.location}
+											courses={org.fields.courses ? org.fields.courses : null}
+										/>
+									);
+								}
+							})}
+						</div>
+					</div>
 				</div>
 			</div>
 		</Layout>

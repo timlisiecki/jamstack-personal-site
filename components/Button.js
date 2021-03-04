@@ -5,10 +5,11 @@ function Button(props) {
 	let buttonSize;
 
 	if (props.type === 'primary') {
-		buttonColors = 'text-white dark:text-regal-800 bg-indigo-600 dark:bg-green-300 hover:bg-indigo-700 dark:hover:bg-green-400';
+		buttonColors =
+			'text-white dark:text-regal-800 border-transparent bg-indigo-600 dark:bg-green-300 hover:bg-indigo-700 dark:hover:bg-green-400';
 	} else if (props.type === 'secondary') {
 		buttonColors =
-			'text-indigo-600 dark:text-green-300 bg-white dark:bg-transparent dark:border-2 dark:border-green-300 hover:bg-gray-50 dark:hover:bg-regal-700';
+			'text-indigo-600 dark:text-green-300 bg-white dark:bg-transparent border-indigo-600 dark:border-green-300 hover:bg-gray-50 dark:hover:bg-regal-700';
 	}
 
 	switch (props.size) {
@@ -27,8 +28,9 @@ function Button(props) {
 		<div className='rounded-md shadow'>
 			<a
 				href={props.href}
-				className={`w-full flex items-center justify-center  border border-transparent font-medium rounded-md  ${buttonColors} ${buttonSize}`}
+				className={`w-full flex items-center justify-center border-2 font-medium rounded-md  ${buttonColors} ${buttonSize}`}
 				target={props.openNewTab ? '_blank' : '_self'}
+				rel={props.openNewTab ? 'noopener' : ''}
 			>
 				{props.title}
 			</a>

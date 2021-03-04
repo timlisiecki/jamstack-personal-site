@@ -6,6 +6,7 @@ function Footer() {
 					<a
 						href='https://www.linkedin.com/in/timothylisiecki/'
 						target='_blank'
+						rel='noopener'
 						className='text-gray-400 dark:text-white hover:text-indigo-600 dark:hover:text-green-300'
 					>
 						<span className='sr-only'>LinkedIn</span>
@@ -42,6 +43,7 @@ function Footer() {
 					<a
 						href='https://github.com/timlisiecki'
 						target='_blank'
+						rel='noopener'
 						className='text-gray-400 dark:text-white hover:text-indigo-600 dark:hover:text-green-300'
 					>
 						<span className='sr-only'>GitHub</span>
