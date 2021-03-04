@@ -1,5 +1,5 @@
-const space = process.env.NEXT_PERSONAL_SITE_ID;
-const accessToken = process.env.NEXT_PERSONAL_SITE_TOKEN;
+const space = process.env.NEXT_PUBLIC_CONTENTFUL_ID;
+const accessToken = process.env.NEXT_PUBLIC_CONTENTFUL_TOKEN;
 
 const client = require('contentful').createClient({
   space: space,
