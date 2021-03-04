@@ -4,7 +4,7 @@ const accessToken = process.env.NEXT_PUBLIC_CONTENTFUL_TOKEN;
 const client = require('contentful').createClient({
   space: space,
   accessToken: accessToken,
-})
+});
 
 // Fetch all entries
 export async function fetchEntries() {

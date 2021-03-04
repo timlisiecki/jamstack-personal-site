@@ -14,7 +14,7 @@ function Stats() {
 					<div className='absolute inset-0 h-1/2 bg-gray-50 dark:bg-regal-700'></div>
 					<div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 						<div className='max-w-6xl mx-auto'>
-							<dl className='rounded-lg bg-white dark:bg-regal-800 shadow-lg dark:shadow-lg-white sm:grid sm:grid-cols-4'>
+							<dl className='rounded-lg bg-white dark:bg-regal-900 shadow-lg dark:shadow-lg-white sm:grid sm:grid-cols-4'>
 								<div className='flex flex-col border-b border-gray-100 dark:border-regal-700 p-6 text-center sm:border-0 sm:border-r'>
 									<dt className='order-2 mt-2 text-lg leading-6 font-medium text-gray-500 dark:text-gray-300'>For Headless CMS</dt>
 									<dd className='order-1 text-2xl font-extrabold text-gray-900 dark:text-white'>

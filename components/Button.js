@@ -14,7 +14,7 @@ function Button(props) {
 
 	switch (props.size) {
 		case 'sm':
-			buttonSize = 'px-4 py-0.5 text-sm md:py-1 md:px-4';
+			buttonSize = 'px-4 py-0.5 text-xs md:py-1 md:px-2';
 			break;
 		case 'base':
 			buttonSize = 'px-6 py-1 text-base md:py-2 md:px-6';

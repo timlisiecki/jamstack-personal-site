@@ -1,7 +1,7 @@
 import Navbar from '../components/navigation/Navbar';
 import Footer from '../components/Footer';
 
-function Main({ children }) {
+export default function Main({ children }) {
 	return (
 		<div>
 			<Navbar />
@@ -12,5 +12,3 @@ function Main({ children }) {
 		</div>
 	);
 }
-
-export default Main;

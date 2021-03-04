@@ -15,7 +15,7 @@ export default function Home(props) {
 			</Head>
 
 			<main>
-				<HomeHero />
+				<HomeHero {...props.bio} />
 				<SimpleCTA />
 				<FeaturedContent content={props.featuredProjectsEntry} />
 				<Stats />
@@ -26,10 +26,13 @@ export default function Home(props) {
 
 export async function getStaticProps() {
 	const featuredProjects = await fetchEntry('747uP7AtItjtrsvET4KSmw');
+	const bioRes = await fetchEntry('65IYqsA48yoV67sxOR8cP9');
 	const featuredProjectsEntry = await featuredProjects.fields;
+	const bio = await bioRes.fields;
 
 	return {
 		props: {
+			bio,
 			featuredProjectsEntry,
 		},
 	};

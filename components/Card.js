@@ -1,7 +1,9 @@
-import uuid from 'react-uuid';
 import Button from './Button';
 
 function Card(props) {
+	const d = new Date(props.date);
+	const formattedDate = d.toLocaleString('en-US', { dateStyle: 'long' });
+
 	return (
 		<div className='group flex flex-col rounded-lg shadow-lg dark:shadow-lg-white bg-white dark:bg-regal-900'>
 			{props.image && (
@@ -23,15 +25,15 @@ function Card(props) {
 				<div className='flex-1'>
 					<p className='text-sm capitalize font-medium text-indigo-600 dark:text-green-300'>{props.type}</p>
 					<span className='block mt-2'>
-						<p className='text-xl font-semibold text-gray-900 dark:text-white'>{props.title}</p>
+						<p className='text-lg font-semibold text-gray-900 dark:text-white'>{props.title}</p>
 
-						{props.author && <p className='mt-3 text-base text-gray-500 dark:text-gray-300'>{props.author}</p>}
+						{props.author && <p className='mt-3 text-sm text-gray-500 dark:text-gray-300'>{props.author}</p>}
 
-						{props.organization && <p className='mt-3 text-base text-gray-500 dark:text-gray-300'>{props.organization}</p>}
+						{props.organization && <p className='mt-3 text-sm text-gray-500 dark:text-gray-300'>{props.organization}</p>}
 
-						{props.date && <p className='mt-3 text-base text-gray-500 dark:text-gray-300'>{props.date}</p>}
+						{props.date && <p className='mt-3 text-sm text-gray-500 dark:text-gray-300'>{formattedDate}</p>}
 
-						{props.desc && <p className='mt-3 text-base text-gray-500 dark:text-gray-300'>{props.desc}</p>}
+						{props.desc && <p className='mt-3 text-sm text-gray-500 dark:text-gray-300'>{props.desc}</p>}
 					</span>
 				</div>
 				<div className='mt-6'>
@@ -46,7 +48,7 @@ function Card(props) {
 						)}
 					</div>
 
-					{props.tags && (
+					{/* {props.tags && (
 						<div className='flex flex-wrap space-x-1 text-sm text-gray-500 dark:text-gray-300'>
 							Tags:{' '}
 							{props.tags.map((tag) => {
@@ -59,7 +61,7 @@ function Card(props) {
 								);
 							})}
 						</div>
-					)}
+					)} */}
 				</div>
 			</div>
 		</div>
