@@ -2,7 +2,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 function AboutMe(props) {
 	return (
-		<div className='relative bg-white dark:bg-regal-800 py-16 sm:py-24'>
+		<section className='relative bg-white dark:bg-regal-800 py-16 sm:py-24'>
 			<div className='lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-3 lg:gap-24 lg:items-start'>
 				<div className='relative sm:py-16 lg:py-0'>
 					<div aria-hidden='true' className='hidden sm:block lg:absolute lg:inset-y-0 lg:right-0 lg:w-screen'>
@@ -35,9 +35,9 @@ function AboutMe(props) {
 
 				<div className='relative col-span-2 mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0'>
 					{/* <!-- Content area --> */}
-					<div className='pt-12 prose dark:prose-dark prose-md md:prose-lg sm:pt-16 lg:pt-20'>
+					<article className='pt-12 prose dark:prose-dark prose-md md:prose-lg sm:pt-16 lg:pt-20'>
 						{documentToReactComponents(props.longBio)}
-					</div>
+					</article>
 
 					{/* <!-- Stats section --> */}
 					<div className='mt-10'>
@@ -114,7 +114,7 @@ function AboutMe(props) {
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 }
 

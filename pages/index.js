@@ -11,6 +11,7 @@ export default function Home(props) {
 		<Layout>
 			<Head>
 				<title>Tim Lisiecki - Front End Developer</title>
+				<meta name='description' content='Tim Lisiecki is a Front End Developer based in Bostn, MA.' />
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 

@@ -7,7 +7,7 @@ function Footer() {
 						href='https://www.linkedin.com/in/timothylisiecki/'
 						target='_blank'
 						rel='noopener'
-						className='text-gray-400 dark:text-white hover:text-indigo-600 dark:hover:text-green-300'
+						className='text-gray-500 dark:text-white hover:text-indigo-600 dark:hover:text-green-300'
 					>
 						<span className='sr-only'>LinkedIn</span>
 						<svg
@@ -44,7 +44,7 @@ function Footer() {
 						href='https://github.com/timlisiecki'
 						target='_blank'
 						rel='noopener'
-						className='text-gray-400 dark:text-white hover:text-indigo-600 dark:hover:text-green-300'
+						className='text-gray-500 dark:text-white hover:text-indigo-600 dark:hover:text-green-300'
 					>
 						<span className='sr-only'>GitHub</span>
 						<svg className='h-6 w-6' fill='currentColor' viewBox='0 0 24 24' aria-hidden='true'>
@@ -57,7 +57,7 @@ function Footer() {
 					</a>
 				</div>
 				<div className='mt-8 md:mt-0 md:order-1'>
-					<p className='text-center text-base text-gray-400 dark:text-white'>
+					<p className='text-center text-base text-gray-500 dark:text-white'>
 						&copy; {new Date().getFullYear()} Personal and Resume Website for Tim Lisiecki.
 					</p>
 				</div>

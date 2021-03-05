@@ -5,9 +5,9 @@ function Card(props) {
 	const formattedDate = d.toLocaleString('en-US', { dateStyle: 'long' });
 
 	return (
-		<div className='group flex flex-col rounded-lg shadow-lg dark:shadow-lg-white bg-white dark:bg-regal-900'>
+		<article className='group flex flex-col rounded-lg shadow-lg dark:shadow-lg-white bg-white dark:bg-regal-900'>
 			{props.image && (
-				<div className='flex-shrink-0'>
+				<figure className='flex-shrink-0'>
 					<img
 						className={`bg-white dark:bg-regal-800 h-48 w-full ${
 							props.type === 'book' ? 'object-contain' : 'object-cover'
@@ -18,7 +18,7 @@ function Card(props) {
 						src={`https://${props.image.file.url}?w=400&h=300&fm=webp&q=80`}
 						alt={props.image.title}
 					/>
-				</div>
+				</figure>
 			)}
 
 			<div className='flex-1 p-6 flex flex-col justify-between'>
@@ -47,24 +47,9 @@ function Card(props) {
 							</span>
 						)}
 					</div>
-
-					{/* {props.tags && (
-						<div className='flex flex-wrap space-x-1 text-sm text-gray-500 dark:text-gray-300'>
-							Tags:{' '}
-							{props.tags.map((tag) => {
-								return (
-									<span key={uuid()}>
-										<small className='bg-gray-100 dark:bg-regal-700 hover:bg-gray-200 dark:hover:bg-regal-600 cursor-pointer p-1 mb-1 rounded-sm'>
-											{tag.fields.tagName}
-										</small>
-									</span>
-								);
-							})}
-						</div>
-					)} */}
 				</div>
 			</div>
-		</div>
+		</article>
 	);
 }
 

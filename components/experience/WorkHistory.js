@@ -3,7 +3,7 @@ import WorkRole from './WorkRole';
 
 function WorkHistory({ title, roles }) {
 	return (
-		<div className='max-w-4xl mx-auto mb-8'>
+		<section className='max-w-4xl mx-auto mb-8'>
 			<div className='dark:text-white'>
 				<h4 className='mb-3'>{title}</h4>
 				<div className='flow-root'>
@@ -27,7 +27,7 @@ function WorkHistory({ title, roles }) {
 					</ul>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 }
 

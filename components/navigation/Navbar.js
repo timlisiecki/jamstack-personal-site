@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import Link from 'next/link';
+import React, { useState } from 'react';
 import ToggleDarkMode from './ToggleDarkMode';
 import NavLink from './NavLink';
 import NavDropdown from './NavDropdown';
@@ -48,15 +47,15 @@ function Navbar() {
 								<NavDropdownLink title='View All Resources' url='/resources' desc='View all courses, books, and other resources.' />
 								<NavDropdownLink
 									title='Courses'
-									url='/resources?contentType=courses'
+									url='/resources?filter=courses'
 									desc='Courses I have taken to learn web and software development, as well as professional development.'
 								/>
-								<NavDropdownLink title='Books' url='/resources?contentType=books' desc='Books that have helped me in my career.' />
-								<NavDropdownLink
+								<NavDropdownLink title='Books' url='/resources?filter=books' desc='Books that have helped me in my career.' />
+								{/* <NavDropdownLink
 									title='Other Resources'
-									url='/resources?contentType=other'
+									url='/resources?filter=other'
 									desc='Discover helpful links and other resources related to web and software development.'
-								/>
+								/> */}
 							</NavDropdown>
 						</nav>
 						<div className='flex flex-col lg:flex-row items-center md:ml-12'>

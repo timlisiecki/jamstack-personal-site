@@ -4,7 +4,7 @@ import Button from './Button';
 
 function FeaturedContent(props) {
 	return (
-		<div className='relative bg-gray-50 dark:bg-regal-700 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8'>
+		<section className='relative bg-gray-50 dark:bg-regal-700 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8'>
 			<div className='absolute inset-0'>
 				<div className='bg-white dark:bg-regal-800 h-1/3 sm:h-2/3'></div>
 			</div>
@@ -32,7 +32,7 @@ function FeaturedContent(props) {
 					<Button title='View All Projects' href='/portfolio' type='primary' size='base' />
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 }
 
