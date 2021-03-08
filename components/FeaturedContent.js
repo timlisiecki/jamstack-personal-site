@@ -21,7 +21,7 @@ function FeaturedContent(props) {
 								type={project.sys.contentType.sys.id}
 								title={project.fields.title}
 								desc={project.fields.description}
-								image={project.fields.banner.fields}
+								image={project.fields.banner ? project.fields.banner.fields : null}
 								link={project.fields.link}
 								sourceLink={project.fields.sourceCodeLink}
 							/>
