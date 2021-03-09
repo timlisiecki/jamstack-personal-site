@@ -6,14 +6,6 @@ const client = require('contentful').createClient({
   accessToken: accessToken,
 });
 
-// Fetch all entries
-export async function fetchEntries() {
-  const entries = await client.getEntries();
-  if (entries.items) return entries.items;
-
-  console.log(`Error getting entries for ${contentType.name}.`);
-}
-
 // Fetch single entry
 export async function fetchEntry(entryId) {
   const entry = await client.getEntry(entryId);
@@ -22,20 +14,10 @@ export async function fetchEntry(entryId) {
   console.log(`Error getting entry for Entry# ${entryId}.`)
 }
 
-// Fetch only projects entries
-export async function fetchProjects() {
+// Fetch all entries
+export async function fetchEntries(type) {
   const entries = await client.getEntries({
-    content_type: 'project'
-  });
-  if (entries.items) return entries.items;
-
-  console.log(`Error getting entries for ${contentType.name}.`);
-}
-
-// Fetch only blogs entries
-export async function fetchBlogs() {
-  const entries = await client.getEntries({
-    content_type: 'blog'
+    content_type: type
   });
   if (entries.items) return entries.items;
 
@@ -44,16 +26,12 @@ export async function fetchBlogs() {
 
 // Fetch all resource entries (resources, courses, and blogs)
 export async function fetchResources() {
-  const entries = await client.getEntries();
-  const resourceTypes = ['book', 'course'];
+  const entries = await client.getEntries({
+    'sys.contentType.sys.id[in]': 'book,course'
+  });
+  if (entries.items) return entries.items;
 
-  if (entries.items) {
-    return entries.items.filter(item => {
-      if (resourceTypes.indexOf(item.sys.contentType.sys.id) !== -1) return item;
-    })
-  }
-
-  console.log(`Error getting entries for resources.`);
+  console.log(`Error getting entries for ${contentType.name}.`);
 }
 
-export default { fetchBlogs, fetchEntries, fetchEntry, fetchProjects, fetchResources };
+export default { fetchEntries, fetchEntry, fetchResources };

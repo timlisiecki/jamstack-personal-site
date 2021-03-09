@@ -38,9 +38,11 @@ function Card(props) {
 				</div>
 				<div className='mt-6'>
 					<div className='w-full mb-4 flex flex-col md:flex-row justify-around'>
-						<span className='text-sm sm:flex sm:justify-between'>
-							<Button title={`View ${props.type}`} href={props.link} type='primary' size='sm' openNewTab={props.type !== 'blog'} />
-						</span>
+						{props.link && (
+							<span className='text-sm sm:flex sm:justify-between'>
+								<Button title={`View ${props.type}`} href={props.link} type='primary' size='sm' openNewTab={props.type !== 'blog'} />
+							</span>
+						)}
 						{props.sourceLink && (
 							<span className='text-sm font-medium text-gray-900'>
 								<Button title='View Code' href={props.sourceLink} type='secondary' size='sm' openNewTab={true} />

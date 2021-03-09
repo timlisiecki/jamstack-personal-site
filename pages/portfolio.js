@@ -1,4 +1,4 @@
-import { fetchProjects } from '../utils/contentfulEntries';
+import { fetchEntries } from '../utils/contentfulEntries';
 import Head from 'next/head';
 import Layout from '../layouts/Main';
 import PageHeader from '../components/PageHeader';
@@ -25,9 +25,9 @@ export default function Portfolio({ projects }) {
 }
 
 export async function getStaticProps() {
-	const res = await fetchProjects();
-	const projects = await res.map((p) => {
-		return p;
+	const res = await fetchEntries('project');
+	const projects = await res.map((project) => {
+		return project;
 	});
 
 	return {

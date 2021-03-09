@@ -1,4 +1,4 @@
-import { fetchBlogs } from '../utils/contentfulEntries';
+import { fetchEntries } from '../utils/contentfulEntries';
 import Head from 'next/head';
 import Layout from '../layouts/Main';
 import PageHeader from '../components/PageHeader';
@@ -22,7 +22,7 @@ export default function Blog({ blogs }) {
 }
 
 export async function getStaticProps() {
-	const res = await fetchBlogs();
+	const res = await fetchEntries('blog');
 	const blogs = await res.map((blog) => {
 		return blog;
 	});
