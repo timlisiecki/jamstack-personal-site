@@ -1,13 +1,17 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { ThemeContext } from '../../utils/themeContext';
+import { useTheme } from 'next-themes';
 
 function ToggleDarkMode(props) {
-	const { theme, setTheme } = useContext(ThemeContext);
+	const [mounted, setMounted] = useState(false);
+	const { theme, setTheme } = useTheme();
 	const [state, setState] = useState();
 
 	useEffect(() => {
+		setMounted(true);
 		setState(theme === 'dark');
 	}, []);
+
+	if (!mounted) return null;
 
 	const switchTheme = () => {
 		setState(!state);
