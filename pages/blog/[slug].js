@@ -22,7 +22,7 @@ export default function Slug({ post }) {
 }
 
 export async function getStaticPaths() {
-	const posts = await fetchBlogs();
+	const posts = await fetchEntries('blog');
 	const paths = await posts.map(({ fields: { slug } }) => ({ params: { slug } }));
 
 	return {
