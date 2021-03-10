@@ -2,7 +2,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 function AboutMe(props) {
 	return (
-		<section className='relative bg-white dark:bg-regal-800 py-16 sm:py-24'>
+		<section className='relative bg-white dark:bg-regal-800 py-16 sm:py-12'>
 			<div className='lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-3 lg:gap-24 lg:items-start'>
 				<div className='relative sm:py-16 lg:py-0'>
 					<div aria-hidden='true' className='hidden sm:block lg:absolute lg:inset-y-0 lg:right-0 lg:w-screen'>

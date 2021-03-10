@@ -14,7 +14,7 @@ export default function About({ bio }) {
 			<PageHeader
 				title='About me'
 				phrase={`It's not you, it's me`}
-				desc='Two Truths and a Lie: I am a good cook, I have travelled all over the world, and I am a boat captain.'
+				desc='Learn more about how I got into web development and software engineering.'
 			/>
 			<AboutMe {...bio} />
 		</Layout>

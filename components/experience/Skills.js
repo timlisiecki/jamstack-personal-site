@@ -8,10 +8,7 @@ function Skills({ skills }) {
 				<div className='flex flex-wrap'>
 					{skills.map((skill) => {
 						return (
-							<span
-								key={uuid()}
-								className='p-1 mb-1 ml-1 bg-gray-100 dark:bg-regal-700 hover:bg-gray-200 dark:hover:bg-regal-600 cursor-pointer rounded-sm'
-							>
+							<span key={uuid()} className='p-1 mb-1 ml-1 bg-gray-100 dark:bg-regal-700 rounded-sm'>
 								{skill.fields.tagName}
 							</span>
 						);
