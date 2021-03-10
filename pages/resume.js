@@ -1,4 +1,4 @@
-import { fetchEntry } from '../utils/contentfulEntries';
+import { fetchEntries, fetchEntry } from '../utils/contentfulEntries';
 import Head from 'next/head';
 import Layout from '../layouts/Main';
 import PageHeader from '../components/PageHeader';
@@ -7,7 +7,7 @@ import EducationHistory from '../components/experience/EducationHistory';
 import Skills from '../components/experience/Skills';
 import Summary from '../components/experience/Summary';
 
-export default function Resume({ resume }) {
+export default function Resume({ resume, courses }) {
 	return (
 		<Layout>
 			<Head>
@@ -18,7 +18,7 @@ export default function Resume({ resume }) {
 			<Summary summary={resume.summary} />
 			<Skills skills={resume.skills} />
 			<WorkHistory title='Experience' roles={resume.employmentHistory} />
-			<EducationHistory title='Education' orgs={resume.education} />
+			<EducationHistory title='Education' orgs={resume.education} courses={courses} />
 		</Layout>
 	);
 }
@@ -26,10 +26,15 @@ export default function Resume({ resume }) {
 export async function getStaticProps() {
 	const resumeRes = await fetchEntry('5j11LhzgPGfIaIianXoi0A');
 	const resume = await resumeRes.fields;
+	const courseRes = await fetchEntries('course');
+	const courses = await courseRes.map((course) => {
+		return course;
+	});
 
 	return {
 		props: {
 			resume,
+			courses,
 		},
 	};
 }

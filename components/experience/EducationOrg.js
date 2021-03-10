@@ -1,4 +1,6 @@
-function EducationOrg({ title, org, link, endDate, location }) {
+import uuid from 'react-uuid';
+
+function EducationOrg({ title, org, link, endDate, location, courses }) {
 	return (
 		<div className='relative pb-8'>
 			<div className='relative flex items-start space-x-3'>
@@ -35,6 +37,24 @@ function EducationOrg({ title, org, link, endDate, location }) {
 							<div className='text-base font-medium text-gray-500 dark:text-gray-300'>{location}</div>
 						</div>
 						<div className='text-base text-gray-700 dark:text-gray-300'>{endDate}</div>
+						{courses && (
+							<div className='flex flex-wrap mt-3'>
+								{courses.map((course) => {
+									return (
+										<span
+											key={uuid()}
+											className='p-1 mb-1 ml-1 bg-gray-100 dark:bg-regal-700 hover:bg-gray-200 dark:hover:bg-regal-600 cursor-pointer rounded-sm'
+										>
+											<small>
+												<a href={course.fields.link} target='_blank' rel='noopener'>
+													{course.fields.title}
+												</a>
+											</small>
+										</span>
+									);
+								})}
+							</div>
+						)}
 					</div>
 				</div>
 			</div>

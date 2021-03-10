@@ -1,7 +1,21 @@
 import uuid from 'react-uuid';
 import EducationOrg from './EducationOrg';
 
-function EducationHistory({ orgs, title }) {
+function EducationHistory({ orgs, title, courses }) {
+	const coursesObj = (courses) => {
+		const obj = {};
+		courses.map((course) => {
+			if (!obj.hasOwnProperty(course.fields.organization.sys.id)) {
+				obj[course.fields.organization.sys.id] = [];
+			}
+
+			return obj[course.fields.organization.sys.id].push(course);
+		});
+
+		return obj;
+	};
+	const orgCourses = coursesObj(courses);
+
 	return (
 		<section className='max-w-4xl mx-auto mb-8'>
 			<div className='dark:text-white'>
@@ -17,7 +31,7 @@ function EducationHistory({ orgs, title }) {
 									link={org.fields.certificationLink}
 									endDate={org.fields.endDate}
 									location={org.fields.location}
-									courses={org.fields.courses ? org.fields.courses : null}
+									courses={orgCourses.hasOwnProperty(org.sys.id) ? orgCourses[org.sys.id] : null}
 								/>
 							);
 						}
@@ -36,7 +50,7 @@ function EducationHistory({ orgs, title }) {
 										link={org.fields.certificationLink}
 										endDate={org.fields.endDate}
 										location={org.fields.location}
-										courses={org.fields.courses ? org.fields.courses : null}
+										courses={orgCourses.hasOwnProperty(org.sys.id) ? orgCourses[org.sys.id] : null}
 									/>
 								);
 							}
