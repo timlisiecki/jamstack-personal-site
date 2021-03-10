@@ -1,4 +1,4 @@
-import { fetchBlogs } from '../../utils/contentfulEntries';
+import { fetchEntries } from '../../utils/contentfulEntries';
 import Head from 'next/head';
 import Layout from '../../layouts/Main';
 import PostHeader from '../../components/blog-posts/PostHeader';
@@ -32,7 +32,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
-	const res = await fetchBlogs();
+	const res = await fetchEntries('blog');
 	const slugs = res.filter((blog) => {
 		if (blog.fields.slug === context.params.slug) return blog;
 	});
