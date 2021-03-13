@@ -1,7 +1,6 @@
 import Button from './Button';
 
 function HomeHero({ bioPic, firstName, lastName, role, location, headline }) {
-	console.log(bioPic);
 	return (
 		<section className='lg:relative flex flex-col lg:flex-row'>
 			<div className='w-full lg:w-1/2 text-center lg:text-left dark:bg-regal-800'>
