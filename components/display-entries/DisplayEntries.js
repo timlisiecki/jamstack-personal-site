@@ -46,8 +46,8 @@ function DisplayEntries(props) {
 							type: entry.sys.contentType.sys.id,
 							title: entry.fields.title,
 							desc: entry.fields.description,
-							link: entry.fields.link || null,
-							tags: entry.fields.tags || null,
+							link: entry.fields.link,
+							tags: entry.fields.tags,
 						};
 
 						if (entry.fields.author) {

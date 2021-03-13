@@ -15,23 +15,26 @@ export async function fetchEntry(entryId) {
 }
 
 // Fetch all entries
-export async function fetchEntries(type) {
-  const entries = await client.getEntries({
-    content_type: type
-  });
+export async function fetchEntries({content_type, select, params}) {
+  const entryArgs = {};
+
+  if (content_type) {
+    entryArgs.content_type = content_type;
+  }
+
+  if (select) {
+    entryArgs.select = select;
+  }
+
+  if (params) {
+    for (const [key, value] of Object.entries(params)) {
+      entryArgs[key] = value;
+    }
+  }
+
+  const entries = await client.getEntries(entryArgs);
+
   if (entries.items) return entries.items;
 
   console.log(`Error getting entries for ${contentType.name}.`);
 }
-
-// Fetch all resource entries (resources, courses, and blogs)
-export async function fetchResources() {
-  const entries = await client.getEntries({
-    'sys.contentType.sys.id[in]': 'book,course'
-  });
-  if (entries.items) return entries.items;
-
-  console.log(`Error getting entries for ${contentType.name}.`);
-}
-
-export default { fetchEntries, fetchEntry, fetchResources };

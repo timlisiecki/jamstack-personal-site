@@ -1,4 +1,4 @@
-import { fetchResources } from '../utils/contentfulEntries';
+import { fetchEntries } from '../utils/contentfulEntries';
 import Head from 'next/head';
 import Layout from '../layouts/Main';
 import PageHeader from '../components/PageHeader';
@@ -28,7 +28,7 @@ export default function Resources({ resources }) {
 }
 
 export async function getStaticProps() {
-	const res = await fetchResources();
+	const res = await fetchEntries({ params: { 'sys.contentType.sys.id[in]': 'book,course' } });
 	const resources = await res.map((resource) => {
 		return resource;
 	});

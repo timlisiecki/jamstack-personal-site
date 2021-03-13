@@ -22,7 +22,7 @@ export default function Blog({ blogs }) {
 }
 
 export async function getStaticProps() {
-	const res = await fetchEntries('blog');
+	const res = await fetchEntries({ content_type: 'blog' });
 	const blogs = await res.map((blog) => {
 		return blog;
 	});

@@ -22,7 +22,7 @@ export default function Slug({ post }) {
 }
 
 export async function getStaticPaths() {
-	const posts = await fetchEntries('blog');
+	const posts = await fetchEntries({ content_type: 'blog', select: 'fields.slug' });
 	const paths = await posts.map(({ fields: { slug } }) => ({ params: { slug } }));
 
 	return {
@@ -32,7 +32,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
-	const res = await fetchEntries('blog');
+	const res = await fetchEntries({ content_type: 'blog' });
 	const slugs = res.filter((blog) => {
 		if (blog.fields.slug === context.params.slug) return blog;
 	});

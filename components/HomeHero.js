@@ -1,6 +1,7 @@
 import Button from './Button';
 
 function HomeHero({ bioPic, firstName, lastName, role, location, headline }) {
+	console.log(bioPic);
 	return (
 		<section className='lg:relative flex flex-col lg:flex-row'>
 			<div className='w-full lg:w-1/2 text-center lg:text-left dark:bg-regal-800'>
@@ -27,7 +28,7 @@ function HomeHero({ bioPic, firstName, lastName, role, location, headline }) {
 					width='400'
 					srcSet={`https://${bioPic.fields.file.url}?w=400&h=300&fm=webp&q=80 400w, https://${bioPic.fields.file.url}?w=600&h=800&fm=webp&q=80 800w`}
 					src={`https://${bioPic.fields.file.url}?w=300&h=400&fm=webp&q=80`}
-					alt={bioPic.fields.fileName}
+					alt={bioPic.fields.file.fileName}
 				/>
 			</div>
 		</section>

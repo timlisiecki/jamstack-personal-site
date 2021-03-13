@@ -25,7 +25,7 @@ export default function Portfolio({ projects }) {
 }
 
 export async function getStaticProps() {
-	const res = await fetchEntries('project');
+	const res = await fetchEntries({ content_type: 'project' });
 	const projects = await res.map((project) => {
 		return project;
 	});

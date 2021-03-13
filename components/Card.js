@@ -12,10 +12,10 @@ function Card(props) {
 						className={`bg-white dark:bg-regal-800 h-48 w-full ${
 							props.type === 'book' ? 'object-contain' : 'object-cover'
 						} object-top shadow dark:shadow-white group-hover:shadow-lg dark:group:hover:shadow-lg-white rounded-md transform transition group-hover:scale-105`}
+						srcSet={`https://${props.image.file.url}?w=400&h=300&fm=webp&q=80 400w, https://${props.image.file.url}?w=800&h=600&fm=webp&q=100 800w`}
+						src={`https://${props.image.file.url}?w=400&h=300&fm=webp&q=100`}
 						height='300'
 						width='400'
-						srcSet={`https://${props.image.file.url}?w=400&h=300&fm=webp&q=80 400w, https://${props.image.file.url}?w=800&h=600&fm=webp&q=80 800w`}
-						src={`https://${props.image.file.url}?w=400&h=300&fm=webp&q=80`}
 						alt={props.image.title}
 					/>
 				</figure>

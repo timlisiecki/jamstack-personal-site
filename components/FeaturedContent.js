@@ -23,7 +23,7 @@ function FeaturedContent(props) {
 								desc={project.fields.description}
 								image={project.fields.banner ? project.fields.banner.fields : null}
 								link={project.fields.link}
-								sourceLink={project.fields.sourceCodeLink}
+								sourceLink={project.fields.codeLink}
 							/>
 						);
 					})}
