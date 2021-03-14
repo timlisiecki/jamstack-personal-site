@@ -21,7 +21,7 @@ export default function Resources({ resources }) {
 				entries={resources}
 				title='Resources'
 				desc="Here's courses, books, and other resources that have helped me learn and understand web/software development over the
-				years, as well blogs that I have written detail my experiences."
+				years."
 			/>
 		</Layout>
 	);

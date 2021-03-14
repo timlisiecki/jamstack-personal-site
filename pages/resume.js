@@ -26,7 +26,7 @@ export default function Resume({ resume, courses }) {
 export async function getStaticProps() {
 	const resumeRes = await fetchEntry('5j11LhzgPGfIaIianXoi0A');
 	const resume = await resumeRes.fields;
-	const courseRes = await fetchEntries('course');
+	const courseRes = await fetchEntries({ content_type: 'course' });
 	const courses = await courseRes.map((course) => {
 		return course;
 	});
