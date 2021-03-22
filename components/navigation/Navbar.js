@@ -60,12 +60,9 @@ function Navbar() {
 						</nav>
 						<div className='flex flex-col lg:flex-row items-center md:ml-12'>
 							<ToggleDarkMode />
-							<a
-								href='#'
-								className='mx-auto my-4 lg:my-0 lg:ml-8 inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white dark:text-regal-800 bg-indigo-600 dark:bg-green-300 hover:bg-indigo-700 dark:hover:bg-green-400'
-							>
+							<button className='mx-auto my-4 lg:my-0 lg:ml-8 inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white dark:text-regal-800 bg-indigo-600 dark:bg-green-300 hover:bg-indigo-700 dark:hover:bg-green-400'>
 								Contact
-							</a>
+							</button>
 						</div>
 					</div>
 				</div>
