@@ -1,5 +1,6 @@
 import Navbar from '../components/navigation/Navbar';
 import Footer from '../components/Footer';
+import Modal from '../components/Modal';
 
 export default function Main({ children }) {
 	return (
@@ -8,6 +9,7 @@ export default function Main({ children }) {
 
 			{children}
 
+			<Modal />
 			<Footer />
 		</div>
 	);

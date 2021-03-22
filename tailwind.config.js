@@ -1,5 +1,6 @@
 const plugin = require('tailwindcss/plugin');
 const typography = require('@tailwindcss/typography');
+const forms = require('@tailwindcss/forms');
 
 module.exports = {
   purge: ['./pages/**/*.js', './components/**/*.js'],
@@ -97,6 +98,7 @@ module.exports = {
   },
   plugins: [
     typography,
+    forms,
     plugin(function({ addBase, theme }) {
       addBase({
         'h1': { fontSize: theme('fontSize.5xl'), fontWeight: theme('fontWeight.bold') },

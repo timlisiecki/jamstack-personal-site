@@ -10,7 +10,7 @@ function Navbar() {
 	const [openMobileMenu, setOpenMobileMenu] = useState(false);
 
 	return (
-		<header className='lg:sticky lg:top-0 z-50'>
+		<header className='lg:sticky lg:top-0 z-10'>
 			<div className='relative bg-white dark:bg-regal-800 shadow dark:shadow-white'>
 				<div className='relative flex justify-between items-center px-4 py-4 sm:px-6 md:justify-start md:space-x-10'>
 					<div>
