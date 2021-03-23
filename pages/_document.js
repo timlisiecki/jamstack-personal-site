@@ -10,6 +10,8 @@ export default class SiteDocument extends Document {
 				<body className='bg-white dark:bg-regal-800'>
 					<Main />
 					<NextScript />
+
+					<div id='modal-root'></div>
 				</body>
 			</Html>
 		);
