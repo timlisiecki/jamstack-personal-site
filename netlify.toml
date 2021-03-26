@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/blog"
+  to = "/resources"
+  status = 301
