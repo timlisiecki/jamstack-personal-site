@@ -9,7 +9,7 @@ function ContactForm() {
 			action='/'
 			data-netlify='true'
 			netlify-honeypot='bot-field'
-			data-netlify-recaptcha='true'
+			// data-netlify-recaptcha='true'
 		>
 			<input type='hidden' name='form-name' value='contact' />
 			<div className='hidden'>
@@ -124,7 +124,7 @@ function ContactForm() {
 					/>
 				</div>
 			</div>
-			<div data-netlify-recaptcha='true'></div>
+			{/* <div data-netlify-recaptcha='true'></div> */}
 			<div>
 				<button
 					type='submit'
