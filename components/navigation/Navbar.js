@@ -42,7 +42,7 @@ function Navbar() {
 							<NavLink title='About' url='/about' />
 							<NavLink title='Portfolio' url='/portfolio' />
 							<NavLink title='Resume' url='/resume' />
-							<NavLink title='Blog' url='/blog' />
+							{/* <NavLink title='Blog' url='/blog' /> */}
 							<NavDropdown title='Resources'>
 								<NavDropdownLink title='View All Resources' url='/resources' desc='View all courses, books, and other resources.' />
 								<NavDropdownLink

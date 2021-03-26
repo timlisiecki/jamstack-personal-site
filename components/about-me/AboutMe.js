@@ -40,12 +40,7 @@ function AboutMe(props) {
 						{documentToReactComponents(props.longBio)}
 					</article>
 
-					<ContactInfo
-						linkedInUrl={props.linkedInUrl}
-						githubUrl={props.githubUrl}
-						freelanceUrl={props.freelanceUrl}
-						contactEmailAddress={props.contactEmailAddress}
-					/>
+					<ContactInfo linkedInUrl={props.linkedInUrl} githubUrl={props.githubUrl} freelanceUrl={props.freelanceUrl} />
 				</div>
 			</div>
 		</section>

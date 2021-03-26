@@ -7,10 +7,10 @@ function WorkHistory({ title, roles }) {
 			<div className='dark:text-white'>
 				<h4 className='mb-3'>{title}</h4>
 				<div className='flow-root'>
-					<ul className='-mb-8'>
+					<div className='-mb-8'>
 						{roles.map((role, i) => {
 							return (
-								<li key={uuid()}>
+								<article key={uuid()}>
 									<WorkRole
 										title={role.fields.jobTitle}
 										company={role.fields.companyName}
@@ -21,10 +21,10 @@ function WorkHistory({ title, roles }) {
 										desc={role.fields.description}
 										isLastItem={roles.length === i + 1}
 									/>
-								</li>
+								</article>
 							);
 						})}
-					</ul>
+					</div>
 				</div>
 			</div>
 		</section>

@@ -38,7 +38,7 @@ function DisplayEntries(props) {
 					<h2 className='text-3xl tracking-tight font-extrabold text-gray-900 dark:text-white sm:text-4xl'>{props.title}</h2>
 					<p className='my-3 max-w-2xl mx-auto text-xl text-gray-500 dark:text-gray-300'>{props.desc}</p>
 				</div>
-				<SortAndFilterInputs />
+				{/* <SortAndFilterInputs /> */}
 				<div className='mt-5 max-w-lg mx-auto grid gap-5 lg:grid-cols-4 lg:max-w-none'>
 					{entries.map((entry) => {
 						let entryProps = {

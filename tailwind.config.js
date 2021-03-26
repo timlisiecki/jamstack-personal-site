@@ -101,6 +101,8 @@ module.exports = {
     forms,
     plugin(function({ addBase, theme }) {
       addBase({
+        'html': { fontSize: '16px' },
+        '*': { boxSizing: 'border-box' },
         'h1': { fontSize: theme('fontSize.5xl'), fontWeight: theme('fontWeight.bold') },
         'h2': { fontSize: theme('fontSize.4xl'), fontWeight: theme('fontWeight.bold') },
         'h3': { fontSize: theme('fontSize.3xl'), fontWeight: theme('fontWeight.bold') },
@@ -109,6 +111,8 @@ module.exports = {
         'h6': { fontSize: theme('fontSize.lg'), fontWeight: theme('fontWeight.semibold') },
         'p': { fontSize: theme('fontSize.base') },
         'small': { fontSize: theme('fontSize.xs') },
+        'ul': { listStyleType: theme('listStyleType.disc'), paddingLeft: '1.5em' },
+        'ol': { listStyleType: theme('listStyleType.decimal'), paddingLeft: '1.5em' },
       })
     })
   ],
