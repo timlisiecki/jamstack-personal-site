@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 
 function ContactInfo({ linkedInUrl, githubUrl, freelanceUrl, isContactPage }) {
 	return (
-		<div className='mt-10'>
+		<div className={`mt-10 ${isContactPage ? 'px-4' : ''}`}>
 			<dl className={`grid grid-cols-1 ${!isContactPage ? 'md:grid-cols-2' : ''} gap-x-4 gap-y-8`}>
 				<div className='border-t-2 border-gray-100 dark:border-regal-700 pt-6'>
 					<dt className='text-base font-medium text-gray-500 dark:text-gray-300'>LinkedIn</dt>

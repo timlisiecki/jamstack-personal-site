@@ -9,7 +9,7 @@ export default function Resources({ resources }) {
 		<Layout>
 			<Head>
 				<title>Resources | Tim Lisiecki</title>
-				<meta name='description' content='Tim Lisiecki is a Front End Developer based in Boston, MA.' />
+				<meta name='description' content='Here are some resources that Tim Lisiecki has used to become a Front End Developer.' />
 			</Head>
 			<PageHeader
 				title='Resources'

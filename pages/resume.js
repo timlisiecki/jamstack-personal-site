@@ -15,10 +15,12 @@ export default function Resume({ resume, courses }) {
 				<meta name='description' content='Tim Lisiecki is a Front End Developer based in Boston, MA.' />
 			</Head>
 			<PageHeader title='Resume' phrase='Experience is key' desc='But is it really work if you love what you do?' />
-			<Summary summary={resume.summary} />
-			<Skills skills={resume.skills} />
-			<WorkHistory title='Experience' roles={resume.employmentHistory} />
-			<EducationHistory title='Education' orgs={resume.education} courses={courses} />
+			<div className='px-4 lg:px-8'>
+				<Summary summary={resume.summary} />
+				<Skills skills={resume.skills} />
+				<WorkHistory title='Experience' roles={resume.employmentHistory} />
+				<EducationHistory title='Education' orgs={resume.education} courses={courses} />
+			</div>
 		</Layout>
 	);
 }

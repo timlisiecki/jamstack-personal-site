@@ -27,7 +27,7 @@ function WorkRole({ title, company, companyURL, location, startDate, endDate, de
 				</div>
 				<div className='min-w-0 flex-1'>
 					<div>
-						<div className='text-sm'>
+						<div className='text-sm text-center md:text-left'>
 							<span className='text-lg font-bold text-indigo-600 dark:text-green-300'>{title}</span>
 						</div>
 						<div className='mt-3 text-center md:mt-0 md:flex md:items-center'>
@@ -36,14 +36,11 @@ function WorkRole({ title, company, companyURL, location, startDate, endDate, de
 									{company}
 								</a>
 							</div>
-
 							<svg className='hidden md:block mx-1 h-5 w-5 text-indigo-600 dark:text-green-300' fill='currentColor' viewBox='0 0 20 20'>
 								<path d='M11 0h3L9 20H6l5-20z'></path>
 							</svg>
-
 							<div className='text-base font-medium text-gray-500 dark:text-gray-300'>{location}</div>
-						</div>
-						<div className='text-base text-gray-700 dark:text-gray-300'>
+							<div className='text-base font-medium text-gray-700 dark:text-gray-300'></div>
 							{startDate} - {endDate}
 						</div>
 					</div>

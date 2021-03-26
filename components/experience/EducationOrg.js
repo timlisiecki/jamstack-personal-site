@@ -20,7 +20,7 @@ function EducationOrg({ title, org, link, endDate, location, courses }) {
 				</div>
 				<div className='min-w-0 flex-1'>
 					<div>
-						<div className='text-sm'>
+						<div className='text-sm text-center md:text-left'>
 							<span className='text-lg font-bold text-indigo-600 dark:text-green-300'>{title}</span>
 						</div>
 						<div className='mt-3 text-center md:mt-0 md:flex md:items-center'>
@@ -35,8 +35,8 @@ function EducationOrg({ title, org, link, endDate, location, courses }) {
 							</svg>
 
 							<div className='text-base font-medium text-gray-500 dark:text-gray-300'>{location}</div>
+							<div className='text-base font-medium text-gray-700 dark:text-gray-300'>{endDate}</div>
 						</div>
-						<div className='text-base text-gray-700 dark:text-gray-300'>{endDate}</div>
 						{courses && (
 							<div className='flex flex-wrap mt-3'>
 								{courses.map((course) => {
