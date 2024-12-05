@@ -35,7 +35,7 @@ function EducationOrg({ title, org, link, endDate, location, courses }) {
 							</svg>
 
 							<div className='text-base font-medium text-gray-500 dark:text-gray-300'>{location}</div>
-							<div className='text-base font-medium text-gray-700 dark:text-gray-300'>{endDate}</div>
+							<div className='ml-auto text-base font-medium text-gray-700 dark:text-gray-300'>{endDate}</div>
 						</div>
 						{courses && (
 							<div className='flex flex-wrap mt-3'>

@@ -19,9 +19,9 @@ function HomeHero({ bioPic, firstName, lastName, role, location, headline }) {
 					</div>
 				</div>
 			</div>
-			<div className='flex lg:w-1/2 lg:h-full'>
+			<div className='flex lg:w-1/2 lg:h-full relative'>
 				<img
-					className='mx-auto'
+					className='w-full h-ful object-contain'
 					alt='Tim Lisiecki headshot'
 					height='300'
 					width='400'

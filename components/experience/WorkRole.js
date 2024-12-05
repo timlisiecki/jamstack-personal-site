@@ -40,7 +40,7 @@ function WorkRole({ title, company, companyURL, location, startDate, endDate, de
 								<path d='M11 0h3L9 20H6l5-20z'></path>
 							</svg>
 							<div className='text-base font-medium text-gray-500 dark:text-gray-300'>{location}</div>
-							<div className='text-base font-medium text-gray-700 dark:text-gray-300'></div>
+							<div className='ml-auto text-base font-medium text-gray-700 dark:text-gray-300'></div>
 							{startDate} - {endDate}
 						</div>
 					</div>
